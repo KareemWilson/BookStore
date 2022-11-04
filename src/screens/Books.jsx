@@ -1,8 +1,13 @@
 import React from 'react';
-import NavBar from '../components/NavBar/NavBar';
+import Book from '../components/Book/Book';
 
 function Books() {
-  return <NavBar />;
+  return (
+    <>
+      <h1>Books List</h1>
+      <Book title="good book" author="good author" />
+    </>
+  );
 }
 
 export default Books;

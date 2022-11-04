@@ -1,8 +1,13 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Books from './screens/Books';
+import Router from './Router';
 
 function App() {
-  return <Books />;
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  );
 }
 
 export default App;
