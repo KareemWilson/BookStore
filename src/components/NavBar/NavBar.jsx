@@ -1,5 +1,6 @@
 import React from 'react';
-import NavOption from './NavOption';
+import NavOption from '../NavOptions/NavOption';
+import styles from './navBar.module.css';
 
 const navItems = [
   {
@@ -16,7 +17,7 @@ const navItems = [
 
 function NavBar() {
   return (
-    <div>
+    <div className={styles.navContainer}>
       <h1>Bookstore CMS</h1>
       <NavOption navItems={navItems} />
     </div>
