@@ -6,7 +6,7 @@ function Books() {
   return (
     <>
       <h1>Books List</h1>
-      <Book title="good book" author="good author" />
+      <Book title="good title" author="good author" />
       <Form />
     </>
   );

@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Book({ title, author }) {
+function Book(props) {
+  const { title, author } = props;
   return (
     <>
       <div>{title}</div>
@@ -12,3 +13,12 @@ function Book({ title, author }) {
 }
 
 export default Book;
+Book.defaultProps = {
+  title: null,
+  author: null,
+};
+
+Book.propTypes = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+};
