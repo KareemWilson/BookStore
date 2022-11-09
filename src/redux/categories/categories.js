@@ -2,7 +2,7 @@ const initialState = [];
 
 // Action_type
 
-const STATUS_CHECKED = 'STATUS_CHECKED';
+const STATUS_CHECKED = 'bookstore/cateogories/STATUS_CHECKED';
 
 // Reducer
 
