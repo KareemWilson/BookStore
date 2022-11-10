@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { number, string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './navOptions.module.css';
 
@@ -19,7 +19,7 @@ NavOption.defaultProps = {
   navItems: [],
 };
 NavOption.propTypes = {
-  navItems: PropTypes.arrayOf(string, number),
+  navItems: PropTypes.arrayOf(Number, String),
 };
 
 export default NavOption;
