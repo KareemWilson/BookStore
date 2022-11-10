@@ -1,4 +1,15 @@
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    title: 'Eat, Pray, Love',
+    author: 'Elizabeth Gilbert',
+  },
+  {
+    id: 2,
+    title: 'Clean Code',
+    author: 'Robert Cecil Martin',
+  },
+];
 
 // Action_types
 
@@ -11,12 +22,12 @@ export default function booksReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
       return [
+        ...state,
         {
           id: action.id,
           title: action.title,
           author: action.author,
         },
-        ...state,
       ];
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.id);
