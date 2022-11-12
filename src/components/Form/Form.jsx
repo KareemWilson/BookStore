@@ -20,19 +20,22 @@ function Form({ id }) {
         placeholder="Author"
         onChange={(e) => setAuthor(e.target.value)}
       />
-      <button type="button" onClick={() => dispatch(addBook(id, title, author))}>
+      <button
+        type="button"
+        onClick={() => dispatch(addBook(
+          {
+            item_id: id, title, author, category: 'not specified',
+          },
+        ))}
+      >
         Add
       </button>
     </form>
   );
 }
 
-Form.defaultProps = {
-  id: null,
-};
-
 Form.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string.isRequired,
 };
 
 export default Form;
