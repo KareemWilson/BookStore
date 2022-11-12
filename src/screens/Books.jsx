@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Book from '../components/Book/Book';
 import Form from '../components/Form/Form';
 import { getBooks } from '../redux/books/books';
+import styles from './books.module.css';
 
 function Books() {
   const dispatch = useDispatch();
@@ -14,9 +15,8 @@ function Books() {
 
   const books = useSelector((state) => state.books);
   return (
-    <>
-      <h1>Books List</h1>
-      <ul>
+    <div className={styles.container}>
+      <ul className={styles.list}>
         {books.map((book) => (
           <li key={uuidv4()}>
             <Book
@@ -24,12 +24,11 @@ function Books() {
               author={book.author}
               id={book.id}
             />
-            <p>{book.id ? book.id : 'no id'}</p>
           </li>
         ))}
       </ul>
       <Form id={uuidv4()} />
-    </>
+    </div>
   );
 }
 
