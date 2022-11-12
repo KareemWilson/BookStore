@@ -8,7 +8,7 @@ function NavOption({ navItems }) {
     <ul className={styles.navOptions}>
       {navItems.map((item) => (
         <li key={item.id}>
-          <Link to={item.path}>{item.name}</Link>
+          <Link className={styles.navItem} to={item.path}>{item.name}</Link>
         </li>
       ))}
     </ul>
