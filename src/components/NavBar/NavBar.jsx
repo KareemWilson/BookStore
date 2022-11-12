@@ -20,6 +20,7 @@ function NavBar() {
     <div className={styles.navContainer}>
       <h1>Bookstore CMS</h1>
       <NavOption navItems={navItems} />
+      <img src="avatar.png" alt="avatar" className={styles.avatarImg} />
     </div>
   );
 }
