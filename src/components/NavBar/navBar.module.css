@@ -3,10 +3,9 @@
   flex-direction: row;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
   padding-left: 17rem;
   color: #0290ff;
-
 }
 
 .avatarImg {

@@ -1,13 +1,13 @@
 .container {
-    background-color: rgb(245, 246, 250);
-    height: 100vh;
-    margin: 0;
+  background-color: rgb(245, 246, 250);
+  height: 100vh;
+  margin: 0;
 }
 
 .list {
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
