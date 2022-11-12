@@ -17,25 +17,27 @@ function Book(props) {
           <li>
             <button type="button" className={styles.optionButton}>Comments</button>
           </li>
+          <span className={styles.verticalBorder} />
           <li>
             <button type="button" className={styles.optionButton} onClick={() => dispatch(removeBook(id))}>Remove</button>
           </li>
+          <span className={styles.verticalBorder} />
           <li>
             <button type="button" className={styles.optionButton}>Comments</button>
           </li>
         </ul>
       </div>
       <div className={styles.completedStatusContainer}>
-        <img src="" alt="comple" />
+        <img src="circle.png" alt="comple" />
         <div className={styles.completedStatus}>
-          <p>50%</p>
-          <p>Completed</p>
+          <p className={styles.percentage}>50%</p>
+          <p className={styles.completed}>Completed</p>
         </div>
       </div>
       <div className={styles.chapterProgressContainer}>
-        <p>Current Chapter</p>
-        <p>Chapter Num #</p>
-        <button type="button">UPDATE PROGRESS</button>
+        <p className={styles.currentChapter}>Current Chapter</p>
+        <p className={styles.chapterNum}>Chapter Num #</p>
+        <button type="button" className={styles.updateProgressBtn}>UPDATE PROGRESS</button>
       </div>
     </div>
   );
