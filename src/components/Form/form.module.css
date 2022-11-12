@@ -1,6 +1,31 @@
 .formContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.formSection {
+  padding-left: 21rem;
+  padding-top: 5rem;
+}
+
+.inputField {
+  height: 3rem;
+  font-size: 19px;
+  width: 17.5rem;
+}
+
+.addBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+    background-color: #0268b6;
 }

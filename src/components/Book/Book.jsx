@@ -5,25 +5,37 @@ import { removeBook } from '../../redux/books/books';
 import styles from './book.module.css';
 
 function Book(props) {
-  const { title, author, id } = props;
+  const {
+    title, author, id, category,
+  } = props;
   const dispatch = useDispatch();
   return (
     <div className={styles.bookContainer}>
       <div className={styles.bookDetailsContainer}>
-        <p className={styles.category}>Action</p>
+        <p className={styles.category}>{category}</p>
         <p className={styles.bookTitle}>{title}</p>
         <p className={styles.bookAuthor}>{author}</p>
         <ul className={styles.optionsButtonsList}>
           <li>
-            <button type="button" className={styles.optionButton}>Comments</button>
+            <button type="button" className={styles.optionButton}>
+              Comments
+            </button>
           </li>
           <span className={styles.verticalBorder} />
           <li>
-            <button type="button" className={styles.optionButton} onClick={() => dispatch(removeBook(id))}>Remove</button>
+            <button
+              type="button"
+              className={styles.optionButton}
+              onClick={() => dispatch(removeBook(id))}
+            >
+              Remove
+            </button>
           </li>
           <span className={styles.verticalBorder} />
           <li>
-            <button type="button" className={styles.optionButton}>Comments</button>
+            <button type="button" className={styles.optionButton}>
+              Comments
+            </button>
           </li>
         </ul>
       </div>
@@ -37,7 +49,9 @@ function Book(props) {
       <div className={styles.chapterProgressContainer}>
         <p className={styles.currentChapter}>Current Chapter</p>
         <p className={styles.chapterNum}>Chapter Num #</p>
-        <button type="button" className={styles.updateProgressBtn}>UPDATE PROGRESS</button>
+        <button type="button" className={styles.updateProgressBtn}>
+          UPDATE PROGRESS
+        </button>
       </div>
     </div>
   );
@@ -48,4 +62,5 @@ Book.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
 };

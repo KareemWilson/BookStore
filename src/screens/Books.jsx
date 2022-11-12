@@ -22,6 +22,7 @@ function Books() {
             <Book
               title={book.title}
               author={book.author}
+              category={book.category}
               id={book.id}
             />
           </li>

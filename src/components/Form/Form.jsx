@@ -11,34 +11,41 @@ function Form({ id }) {
   const dispatch = useDispatch();
 
   return (
-    <form className={styles.formContainer}>
+    <div className={styles.formSection}>
       <p className={styles.sectionTitle}>Add New Book</p>
-      <input
-        type="text"
-        placeholder="title"
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Author"
-        onChange={(e) => setAuthor(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Category"
-        onChange={(e) => setCategory(e.target.value)}
-      />
-      <button
-        type="button"
-        onClick={() => dispatch(addBook(
-          {
-            item_id: id, title, author, category,
-          },
-        ))}
-      >
-        Add
-      </button>
-    </form>
+      <form className={styles.formContainer}>
+        <input
+          className={styles.inputField}
+          type="text"
+          placeholder="title"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <input
+          className={styles.inputField}
+          type="text"
+          placeholder="Author"
+          onChange={(e) => setAuthor(e.target.value)}
+        />
+        <input
+          className={styles.inputField}
+          type="text"
+          placeholder="Category"
+          onChange={(e) => setCategory(e.target.value)}
+        />
+        <button
+          className={styles.addBtn}
+          type="button"
+          onClick={() => dispatch(addBook({
+            item_id: id,
+            title,
+            author,
+            category,
+          }))}
+        >
+          Add Book
+        </button>
+      </form>
+    </div>
   );
 }
 
