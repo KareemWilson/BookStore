@@ -41,7 +41,7 @@ export const getBooks = createAsyncThunk(GET_BOOKS, async () => {
       }));
     return indexes;
   } catch (error) {
-    return console.log(error);
+    return error;
   }
 });
 
@@ -50,7 +50,7 @@ export const addBook = createAsyncThunk(ADD_BOOK, async (args, thunkAPI) => {
     await bookServices.addBook(args);
     return thunkAPI.dispatch(getBooks());
   } catch (error) {
-    return console.log(error);
+    return error;
   }
 });
 
@@ -59,6 +59,6 @@ export const removeBook = createAsyncThunk(REMOVE_BOOK, async (args) => {
     await bookServices.deleteBook(args);
     return args;
   } catch (error) {
-    return console.log(error);
+    return error;
   }
 });
