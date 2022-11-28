@@ -1,0 +1,40 @@
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.formSection {
+  padding-left: 21rem;
+  padding-top: 5rem;
+}
+
+.sectionTitle {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #888;
+}
+
+.inputField {
+  height: 3rem;
+  font-size: 19px;
+  width: 17.5rem;
+}
+
+.addBtn {
+  width: 11.5rem;
+  height: 2.813rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #0268b6;
+}

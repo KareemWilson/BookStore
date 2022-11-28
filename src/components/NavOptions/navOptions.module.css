@@ -3,4 +3,11 @@
   flex-direction: row;
   list-style: none;
   gap: 12px;
+  color: #121212;
+}
+
+.navItem {
+  color: #121212;
+  text-decoration: none;
+  opacity: 0.5;
 }
